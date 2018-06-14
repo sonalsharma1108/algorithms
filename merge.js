@@ -23,4 +23,4 @@ function mergeSort(arr){
     }  
     return result.concat(left.slice(l)).concat(right.slice(r));
   }
-  insertionSort([1,2,5,6,3,4,7,8]);
+  mergeSort([1,2,5,6,3,4,7,8]);
