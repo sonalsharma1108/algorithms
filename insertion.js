@@ -1,18 +1,14 @@
-function insertionSort(arr){
-var i, len = arr.length, element, j;
-
-for(i = 1; i<len; i++){
-    element = arr[i];
-    j = i;
-
-    while(j>0 && arr[j-1]>toInsert){
-    arr[j] = arr[j-1];
-    j--;
+function insertionSort (items) {
+for (var i = 0; i < items.length; i++) {
+    let value = items[i]
+    for (var j = i - 1; j > -1 && items[j] > value; j--) {
+    items[j + 1] = items[j]
     }
-
-    arr[j] = element;
+    items[j + 1] = value
 }
 
-return arr;
+return list
 }
-insertionSort([8,6,3,5,4,9]);
+
+const list = [8,6,3,5,4,9,7,1,2,10]
+console.log(insertionSort(list))
